@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container max-w-4xl text-xl bg-white mt-10 p-10 shadow rounded-lg whitespace-pre-line"
+    class="container max-w-4xl text-xl bg-white my-10 p-10 shadow rounded-lg whitespace-pre-line"
   >
     <h1 class="font-semibold text-3xl text-center mb-4">{{ title }}</h1>
     <ReaderText :text="text" />
