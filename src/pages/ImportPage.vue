@@ -5,13 +5,13 @@
     <form @submit.prevent="handleSubmit">
       <input
         class="w-full px-4 py-2 text mb-2 rounded border"
-        placeholder="Enter the title..."
+        placeholder="Enter the title"
         v-model="title"
         required
       />
       <textarea
         class="p-4 w-full resize-y rounded mb-2 border h-80"
-        placeholder="Enter the text you want to read (make sure it's formatted properly)..."
+        placeholder="Enter the text you want to read"
         v-model="text"
         required
       />
@@ -30,12 +30,8 @@ import { mapMutations } from 'vuex';
 export default {
   data() {
     return {
-      title: `Je m’appelle Jessica`,
-      text: `Je m’appelle Jessica. Je suis une fille, je suis française et j’ai treize ans. Je vais à l’école à Nice, mais j’habite à Cagnes-Sur-Mer. J’ai deux frères. Le premier s’appelle Thomas, il a quatorze ans. Le second s’appelle Yann et il a neuf ans. Mon papa est italien et il est fleuriste. Ma mère est allemande et est avocate. Mes frères et moi parlons français, italien et allemand à la maison. Nous avons une grande maison avec un chien, un poisson et deux chats.
-
-Aujourd’hui, on est samedi, nous rendons visite à notre grand-mère. Elle a 84 ans et elle habite à Antibes. J’adore ma grand-mère, elle est très gentille. Elle fait des bons gâteaux.
-
-Lundi, je retourne à l’école. Je suis contente, je vais voir Amélie. C’est ma meilleure amie. J’aime beaucoup l’école. Mes matières préférées sont le français et le sport. J’aime beaucoup lire et je nage très bien.`,
+      title: '',
+      text: '',
     };
   },
   methods: {
