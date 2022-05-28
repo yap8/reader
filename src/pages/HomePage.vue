@@ -3,13 +3,18 @@
     class="container max-w-4xl text-xl bg-white mt-10 p-10 shadow rounded-lg whitespace-pre-line"
   >
     <h1 class="font-semibold text-3xl text-center mb-4">{{ title }}</h1>
-    <p>{{ text }}</p>
+    <ReaderText :text="text" />
   </div>
 </template>
 
 <script>
+import ReaderText from '@/components/ReaderText.vue';
+
 export default {
   name: 'HomePage',
+  components: {
+    ReaderText,
+  },
   data() {
     return {
       title: `Je m’appelle Jessica`,
