@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { mapMutations, mapState } from 'vuex';
+
 import ReaderTranslation from './ReaderTranslation';
 
 export default {
@@ -31,15 +33,25 @@ export default {
       active: false,
     };
   },
+  computed: {
+    ...mapState(['wordSelected']),
+  },
   methods: {
+    ...mapMutations(['setWordSelected']),
     handleWordClick(e) {
-      e.stopPropagation();
+      if (!this.wordSelected) e.stopPropagation();
 
-      this.active = !this.active;
+      setTimeout(() => {
+        this.setWordSelected(true);
+        this.active = true;
+      }, 0);
     },
   },
   mounted() {
-    document.addEventListener('click', () => (this.active = false));
+    document.addEventListener('click', () => {
+      this.setWordSelected(false);
+      this.active = false;
+    });
   },
 };
 </script>
