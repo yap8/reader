@@ -3,7 +3,7 @@
     <ReaderTranslation v-if="active" :word="word" @click.stop />
     <button
       :class="[
-        'relative py-px px-2 rounded transition hover:bg-slate-100',
+        'relative py-px px-2 rounded hover:bg-slate-100',
         { 'bg-slate-100': active },
       ]"
       @click="handleWordClick"
