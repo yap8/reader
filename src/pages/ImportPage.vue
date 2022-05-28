@@ -10,7 +10,7 @@
         required
       />
       <textarea
-        class="p-4 w-full resize-y rounded mb-2 border h-48"
+        class="p-4 w-full resize-y rounded mb-2 border h-80"
         placeholder="Enter the text you want to read (make sure it's formatted properly)..."
         v-model="text"
         required
