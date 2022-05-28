@@ -1,14 +1,18 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
 
 export default createStore({
   state: {
+    wordActive: false,
   },
-  getters: {
-  },
+  getters: {},
   mutations: {
+    setActive(state) {
+      state.wordActive = true;
+    },
+    setInactive(state) {
+      state.wordActive = false;
+    },
   },
-  actions: {
-  },
-  modules: {
-  }
-})
+  actions: {},
+  modules: {},
+});
