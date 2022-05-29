@@ -9,6 +9,7 @@ export default createStore({
 Aujourd’hui, on est samedi, nous rendons visite à notre grand-mère. Elle a 84 ans et elle habite à Antibes. J’adore ma grand-mère, elle est très gentille. Elle fait des bons gâteaux.
 
 Lundi, je retourne à l’école. Je suis contente, je vais voir Amélie. C’est ma meilleure amie. J’aime beaucoup l’école. Mes matières préférées sont le français et le sport. J’aime beaucoup lire et je nage très bien.`,
+    translations: [],
   },
   getters: {},
   mutations: {
@@ -20,6 +21,9 @@ Lundi, je retourne à l’école. Je suis contente, je vais voir Amélie. C’es
     },
     setWordSelected(state, value) {
       state.wordSelected = value;
+    },
+    addTranslation(state, value) {
+      state.translations.push(value);
     },
   },
   actions: {},
