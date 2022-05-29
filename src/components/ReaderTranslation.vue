@@ -38,5 +38,12 @@ export default {
       return this.word.replace(/\.|,|;/g, '');
     },
   },
+  mounted() {
+    // API CALL
+
+    setTimeout(() => {
+      this.translations = ['translation 1', 'translation 2'];
+    }, 200);
+  },
 };
 </script>
