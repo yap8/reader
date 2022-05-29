@@ -5,7 +5,7 @@
       <ReaderTranslationButton
         :class="{ 'mt-1': index }"
         v-for="(translation, index) in translations"
-        :word="word"
+        :word="filteredWord"
         :translation="translation"
         :key="translation + index"
       />
