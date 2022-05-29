@@ -5,9 +5,9 @@
       <ReaderTranslationButton
         :class="{ 'mt-1': index }"
         v-for="(translation, index) in translations"
+        :translation="translation"
         :key="translation + index"
-        >{{ translation }}</ReaderTranslationButton
-      >
+      />
     </div>
     <AppSpinner v-else />
   </div>
