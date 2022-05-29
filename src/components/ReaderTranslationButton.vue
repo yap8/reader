@@ -16,11 +16,15 @@ export default {
       type: String,
       required: true,
     },
+    word: {
+      type: String,
+      required: true,
+    },
   },
   methods: {
     ...mapMutations(['addTranslation']),
     handleClick() {
-      this.addTranslation(this.translation);
+      this.addTranslation([this.word, this.translation]);
     },
   },
 };
