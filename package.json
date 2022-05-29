@@ -1,7 +1,6 @@
 {
   "name": "vue-reader",
   "version": "0.1.0",
-  "homepage": "https://yap8.github.io/reader",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
