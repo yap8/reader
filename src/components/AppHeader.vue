@@ -13,7 +13,10 @@
           to="/import"
           >Import</router-link
         >
-        <button class="text-xl text-white p-2 transition hover:underline">
+        <button
+          class="text-xl text-white p-2 transition hover:underline"
+          @click="handleExport"
+        >
           Export
         </button>
       </nav>
@@ -22,5 +25,16 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from 'vuex';
+
+export default {
+  computed: {
+    ...mapState(['translations']),
+  },
+  methods: {
+    handleExport() {
+      alert(JSON.stringify(this.translations));
+    },
+  },
+};
 </script>
