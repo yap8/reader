@@ -1,6 +1,6 @@
 <template>
   <span class="inline-block relative">
-    <ReaderTranslation v-if="active" :word="word" @click.stop />
+    <ReaderTranslation v-if="active" :word="word" />
     <button
       :class="[
         'relative py-px px-2 rounded hover:bg-slate-100',
@@ -38,9 +38,7 @@ export default {
   },
   methods: {
     ...mapMutations(['setWordSelected']),
-    handleWordClick(e) {
-      if (!this.wordSelected) e.stopPropagation();
-
+    handleWordClick() {
       setTimeout(() => {
         this.setWordSelected(true);
         this.active = true;
